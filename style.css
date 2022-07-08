@@ -191,7 +191,7 @@ section .title::before{
     margin-bottom: 10px;
 }
 .about .about-content .right p{
-    text-align: justify;
+    text-align: left;
 }
 .about .about-content .right a{
     position: relative;
@@ -336,7 +336,8 @@ section .title::before{
 .education .carousel .card .box{
     display: flex;
     flex: 1;
-    padding: 25px 35px;
+    max-width: 100%;
+    padding: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -559,8 +560,27 @@ section .title::before{
         width: 90%;
         padding: 1 23px;
     }
+    .education .carousel .card .box{
+        max-width: 100%;
+        padding: 0;
+        word-wrap: break-word;
+    }
+    .education .carousel .card img{
+        height: 100px;
+        width: auto;
+    }
     .contact .contact-content .column{
         width: 90%;
         margin-bottom: 35px;
+    }
+    .contact .contact-content .text{
+        margin-left: 40px;
+        margin-bottom: 20px;
+    }
+    .contact .contact-content .left .icons .sm_icons{
+        width: 50px;
+        margin-left: 40px;
+        margin-right: 10px;
+        margin-bottom: 20px;
     }
 }
