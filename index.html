@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -195,12 +196,31 @@
         </div>
     </section>
 
+    <!-- View Counter-->
+
+    <footer>
+        <span>This page has been viewed <a id="count">0</a><span> times</span></span>
+    </footer>
+
     <script src="script.js"></script>
     <script src="scroll-out.js"></script>
     <script type="text/javascript">
         ScrollOut({
             targets: 'ul'
         })
+    </script>
+    <script>
+        const countEl = document.getElementById('count');
+
+        updateVisitCount();
+
+        function updateVisitCount() {
+            fetch('https://api.countapi.xyz/update/illumine/website/?amount=1')
+                .then(res => res.json())
+                .then(res => {
+                    countEl.innerHTML = res.value;
+                });
+        }
     </script>
 </body>
 </html>

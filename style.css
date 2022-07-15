@@ -161,7 +161,7 @@ section .title::before{
 
 /*about section styling*/
 
-.about, .project, .achievement,.education, .contact{
+.about, .project, .achievement,.education, .contact, footer{
     font-family: 'Poppins' , sans-serif;
 }
 .about .about-content,
@@ -455,7 +455,17 @@ section .title::before{
     background: none;
 }
 
+/* View Counter styling */
 
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: right;
+}
+footer a{
+    color: rgb(118,185,0);
+}
 
 /*resonsive media query start*/
 @media (max-width: 1300px){
