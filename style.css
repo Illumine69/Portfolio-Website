@@ -291,6 +291,9 @@ section .title::before{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+.project .project-content .card a{
+    color: #fff;
+}
 .project .project-content .card p{
     margin-left: 10px;
     margin-right: 10px;
